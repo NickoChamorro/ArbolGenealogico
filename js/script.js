@@ -54,15 +54,18 @@ function botonHoverOff(boton){
 
 }
 
+// Ver si es mobile, tablet o PC
+var detector = new MobileDetect(window.navigator.userAgent);
+
 // Llamar a HTML mobile o principal segun tamaño de pantalla
 const comprobarAncho = () => {
     nombreHTML = location.pathname.match(/[^\/]+$/);
     if(nombreHTML=="index.html"){
-        if(window.innerWidth <= 580){
+        if(window.innerWidth <= 580 || detector.tablet()!=null || detector.phone()!=null){
             location.href="index_m.html";
         }
     }else if(nombreHTML=="index_m.html"){
-        if(window.innerWidth > 580){
+        if(window.innerWidth > 580 && detector.tablet()==null && detector.phone()==null && detector.mobile()==null){
             location.href="index.html";
         }
     }    
@@ -76,7 +79,6 @@ window.addEventListener('resize', () => {
 
 // Div que siga el recorrido del cursor y ocupe su lugar
 const cursor = document.querySelector(".cursor");
-var detector = new MobileDetect(window.navigator.userAgent)
 var timeout;
 
 document.addEventListener("mousemove", (e) => {
