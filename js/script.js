@@ -59,7 +59,7 @@ var detector = new MobileDetect(window.navigator.userAgent);
 
 // Llamar a HTML mobile o principal segun tamaño de pantalla
 const comprobarAncho = () => {
-    nombreHTML = location.pathname.match(/[^\/]+$/);
+    nombreHTML = window.location.pathname.match(/[^\/]+$/);
     console.log('nombreHTML:'+nombreHTML+' window.innerWidth:'+window.innerWidth+' detector.phone:'+detector.phone());
     if(nombreHTML=="index.html"){
         if(window.innerWidth <= 580 || detector.tablet()!=null || detector.phone()!=null){
