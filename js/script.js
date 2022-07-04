@@ -60,7 +60,6 @@ var detector = new MobileDetect(window.navigator.userAgent);
 // Llamar a HTML mobile o principal segun tamaño de pantalla
 const comprobarAncho = () => {
     let nombreHTML = window.location.pathname.match(/[^\/]+$/);
-    console.log('window.location.pathname:'+window.location.pathname+'nombreHTML:'+nombreHTML+' window.innerWidth:'+window.innerWidth+' detector.phone:'+detector.phone());
     if(nombreHTML==null || nombreHTML=='index.html'){
         if(window.innerWidth <= 580 || detector.tablet()!=null || detector.phone()!=null){
             window.location.href="https://nickochamorro.github.io/ArbolGenealogico/index_m.html";
@@ -103,3 +102,14 @@ document.addEventListener("mouseout", () => {
     cursor.style.display = "none";
 });
 
+// Reorientar web a vertical si gira dispositivo a horizontal
+$(document).ready(function () {
+    if (detector.tablet()!=null || detector.phone()!=null){
+        function reorient(e) {
+        var portrait = (window.orientation % 180 == 0);
+        $("body > div").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "");
+        }
+        window.onorientationchange = reorient;
+        window.setTimeout(reorient, 0);
+    }
+  });
