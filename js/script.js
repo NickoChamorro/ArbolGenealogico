@@ -64,7 +64,7 @@ const comprobarAncho = () => {
     console.log('nombreHTML:'+nombreHTML+' window.innerWidth:'+window.innerWidth+' detector.phone:'+detector.phone());
     if(nombreHTML==null){
         if(window.innerWidth <= 580 || detector.tablet()!=null || detector.phone()!=null){
-            window.location.href="/m/index_m.html";
+            window.location.href="/ArbolGenealogico/m/index_m.html";
         }
     }else if(nombreHTML=="index_m.html"){
         if(window.innerWidth > 580 && detector.tablet()==null && detector.phone()==null && detector.mobile()==null){
