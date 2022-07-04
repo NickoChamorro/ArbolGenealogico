@@ -61,7 +61,7 @@ var detector = new MobileDetect(window.navigator.userAgent);
 const comprobarAncho = () => {
     let nombreHTML = window.location.pathname.match(/[^\/]+$/);
     console.log('window.location.pathname'+window.location.pathname);
-    console.log('nombreHTML:'+nombreHTML+' window.innerWidth:'+window.innerWidth+' detector.phone:'+detector.phone());
+    // console.log('nombreHTML:'+nombreHTML+' window.innerWidth:'+window.innerWidth+' detector.phone:'+detector.phone());
     if(nombreHTML=="index.html"){
         if(window.innerWidth <= 580 || detector.tablet()!=null || detector.phone()!=null){
             window.location.href="/index_m.html";
