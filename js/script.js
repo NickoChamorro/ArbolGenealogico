@@ -62,11 +62,11 @@ const comprobarAncho = () => {
     nombreHTML = location.pathname.match(/[^\/]+$/);
     if(nombreHTML=="index.html"){
         if(window.innerWidth <= 580 || detector.tablet()!=null || detector.phone()!=null){
-            location.href="index_m.html";
+            location.href="/index_m.html";
         }
     }else if(nombreHTML=="index_m.html"){
         if(window.innerWidth > 580 && detector.tablet()==null && detector.phone()==null && detector.mobile()==null){
-            location.href="index.html";
+            location.href="/index.html";
         }
     }    
 };
