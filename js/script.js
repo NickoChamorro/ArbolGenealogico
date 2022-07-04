@@ -64,11 +64,11 @@ const comprobarAncho = () => {
     // console.log('nombreHTML:'+nombreHTML+' window.innerWidth:'+window.innerWidth+' detector.phone:'+detector.phone());
     if(nombreHTML=="index.html"){
         if(window.innerWidth <= 580 || detector.tablet()!=null || detector.phone()!=null){
-            window.location.href="/index_m.html";
+            window.location.href="/m/index_m.html";
         }
     }else if(nombreHTML=="index_m.html"){
         if(window.innerWidth > 580 && detector.tablet()==null && detector.phone()==null && detector.mobile()==null){
-            window.location.href="/index.html";
+            window.location.href="../index.html";
         }
     }    
 };
