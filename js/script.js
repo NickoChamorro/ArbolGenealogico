@@ -71,30 +71,11 @@ const comprobarAncho = () => {
     }    
 };
 
-// Reorientar web a vertical si gira dispositivo a horizontal
-const comprobarRotacion = () => {
-    if (detector.tablet()!=null || detector.phone()!=null){
-        function reorient(e) {
-            var portrait = (window.orientation % 180 == 0);
-            $("body > div").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "");
-            window.onorientationchange = reorient;
-            window.setTimeout(reorient, 0);
-        }
-    }
-};
-
 comprobarAncho();
-comprobarRotacion();
 
 window.addEventListener('resize', () => {
 	comprobarAncho();
-    comprobarRotacion();
 });
-
-window.addEventListener('orientationchange', () => {
-    comprobarRotacion();
-});
-
 
 // Div que siga el recorrido del cursor y ocupe su lugar
 const cursor = document.querySelector(".cursor");
