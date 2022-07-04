@@ -61,9 +61,9 @@ var detector = new MobileDetect(window.navigator.userAgent);
 const comprobarAncho = () => {
     let nombreHTML = window.location.pathname.match(/[^\/]+$/);
     console.log('window.location.pathname:'+window.location.pathname+'nombreHTML:'+nombreHTML+' window.innerWidth:'+window.innerWidth+' detector.phone:'+detector.phone());
-    if(nombreHTML==null || nombreHTML=='https://nickochamorro.github.io/ArbolGenealogico/index_m.html'){
+    if(nombreHTML==null || nombreHTML=='index.html'){
         if(window.innerWidth <= 580 || detector.tablet()!=null || detector.phone()!=null){
-            window.location.href="/index_m.html";
+            window.location.href="https://nickochamorro.github.io/ArbolGenealogico/index_m.html";
         }
     }else if(nombreHTML=="index_m.html"){
         if(window.innerWidth > 580 && detector.tablet()==null && detector.phone()==null && detector.mobile()==null){
