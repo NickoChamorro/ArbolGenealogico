@@ -101,3 +101,5 @@ document.addEventListener("mousemove", (e) => {
 document.addEventListener("mouseout", () => {
     cursor.style.display = "none";
 });
+
+window.screen.lockOrientation('portrait');
