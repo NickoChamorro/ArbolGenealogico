@@ -16,7 +16,7 @@ _Se recomienda utilizar un IDE editor de código fuente para actualizar los arch
 
 _Para públicar la página web se deben subir a un hosting todos los archivos del repositorio y como página principal utilizar el archivo index.html._
 
-Aquí puedes ver la web publicada: <a href="https://nickochamorro.github.io/ArbolGenealogico/">Página árbol genealógico</a> 
+Aquí puedes ver la web publicada: <a href="https://nickochamorro.github.io/ArbolGenealogico/" target="_blank">Página árbol genealógico</a> 
 
 ## Construido con 🛠️
 
